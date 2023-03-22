@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  *::-webkit-scrollbar{
+    width: 1rem;
+  }
+  *::-webkit-scrollbar-track{
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #495057;
+    outline: 1px solid #343a40;
+  }
+  body{
+    @apply bg-zinc-900 text-zinc-200;
+  }
+}
+
+@layer components {
+  .input-spotify {
+    @apply px-5 py-2 w-2/3 focus:bg-black rounded-full;
+    @apply focus:outline-none focus:ring-[1px] focus:ring-green-700;
+    @apply flex-1 text-zinc-200 bg-zinc-800; 
+    @apply sm:px-5 sm:py-3;
+    @apply placeholder:text-zinc-400;
+  }
+  .parent{
+    @apply flex flex-col gap-10 items-center p-6;
+  }
+}
